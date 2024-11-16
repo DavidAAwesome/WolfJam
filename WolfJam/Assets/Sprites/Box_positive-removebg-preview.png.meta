@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Box_positive-removebg-preview_0: -4788939688506917963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
