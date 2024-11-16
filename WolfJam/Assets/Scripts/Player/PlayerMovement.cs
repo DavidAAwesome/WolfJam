@@ -32,15 +32,21 @@ public class PlayerMovement : MonoBehaviour
     {
         // Map controller to movement
         if (controller.isLeft) {
-            // move
-            transform.position += Vector3.left * speed * Time.deltaTime;
-            Flip(-1);
+            if (!forwardCollider.GetComponent<ForwardCollider>().isColliding)
+            { 
+                // move
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                Flip(-1);
+            }
         }
         if (controller.isRight)
         {
-            // move
-            transform.position += Vector3.right * speed * Time.deltaTime;
-            Flip(1);
+            if (!forwardCollider.GetComponent<ForwardCollider>().isColliding)
+            {
+                // move
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                Flip(1);
+            }
         }
         if (controller.isDown)
         {
@@ -60,7 +66,6 @@ public class PlayerMovement : MonoBehaviour
         {
             scale.x *= direction;
         }
-        Debug.Log(scale);
         transform.localScale = scale;
     }
 

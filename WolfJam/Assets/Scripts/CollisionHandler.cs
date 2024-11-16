@@ -20,7 +20,7 @@ public class CollisionHandler : MonoBehaviour
    
         if(AABBCollision(thisInfo, otherInfo))
         {
-            Debug.Log($"Collision Detected! {otherInfo.name}");
+            Debug.Log($"Collision Detected! {thisInfo.name} and {otherInfo.name}");
             isColliding = true;
         }
     }
