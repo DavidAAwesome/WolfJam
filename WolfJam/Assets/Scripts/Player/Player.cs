@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     public bool usePolarity;
     public Animator animator;
 
+    bool previousInteractState = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,14 +26,20 @@ public class Player : MonoBehaviour
     void Update()
     {
         usePolarity = controller.useAction;
+        previousInteractState = controller.useInteract;
         if (usePolarity) {
-            animator.SetBool("Polarity",true);
+            animator.SetBool("Polarity", true);
             Debug.Log("Is on.");
         }
         else
         {
             animator.SetBool("Polarity", false);
         }
+    }
+
+    public bool PressedInteract()
+    {
+        return (previousInteractState == false && controller.useInteract);
     }
 
     void SetUpControls()
@@ -44,6 +52,7 @@ public class Player : MonoBehaviour
                 controller.left = KeyCode.A;
                 controller.right = KeyCode.D;
                 controller.action = KeyCode.LeftShift;
+                controller.interact = KeyCode.E;
 
                 charge = Charge.Plus;
                 break;
@@ -53,6 +62,7 @@ public class Player : MonoBehaviour
                 controller.left = KeyCode.LeftArrow;
                 controller.right = KeyCode.RightArrow;
                 controller.action = KeyCode.RightShift;
+                controller.interact = KeyCode.Period;
 
                 charge = Charge.Minus;
                 break;

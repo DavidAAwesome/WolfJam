@@ -9,8 +9,9 @@ public class PlayerController : MonoBehaviour
     public KeyCode up;
     public KeyCode down;
     public KeyCode action;
+    public KeyCode interact;
 
-    public bool isLeft, isRight, isUp, isDown, useAction = false;
+    public bool isLeft, isRight, isUp, isDown, useAction, useInteract = false;
 
     void Update()
     {
@@ -19,5 +20,6 @@ public class PlayerController : MonoBehaviour
         isUp = Input.GetKey(up);
         isDown = Input.GetKey(down);
         useAction = Input.GetKey(action);
+        useInteract = Input.GetKey(interact);
     }
 }
