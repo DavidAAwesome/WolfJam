@@ -39,7 +39,7 @@ public class ChargeScript : MonoBehaviour
         switch (charge)
         {
             case Charge.Minus:
-                if (other.CompareTag("Plus"))
+                if (other.CompareTag("Plus") && other.GetComponent<Player>().usePolarity)
                 {
                     //Pulls Minus
                     Rigidbody2D playerRb = other.GetComponent<Rigidbody2D>();
@@ -53,7 +53,7 @@ public class ChargeScript : MonoBehaviour
                         playerRb.AddForce(direction.normalized * force);
                     }
                 }
-                else if (other.CompareTag("Minus"))
+                else if (other.CompareTag("Minus") && other.GetComponent<Player>().usePolarity)
                 {
                     //Pushes Minus
                     Rigidbody2D playerRb = other.GetComponent<Rigidbody2D>();
@@ -70,7 +70,7 @@ public class ChargeScript : MonoBehaviour
         
                 break;
             case Charge.Plus:
-                if (other.CompareTag("Plus"))
+                if (other.CompareTag("Plus") && other.GetComponent<Player>().usePolarity)
                 {
                     //Pushes Plus
                     Rigidbody2D playerRb = other.GetComponent<Rigidbody2D>();
@@ -84,7 +84,7 @@ public class ChargeScript : MonoBehaviour
                         playerRb.AddForce(direction.normalized * force);
                     }
                 }
-                else if (other.CompareTag("Minus"))
+                else if (other.CompareTag("Minus") && other.GetComponent<Player>().usePolarity)
                 {
                     //Pulls Minus
                     Rigidbody2D playerRb = other.GetComponent<Rigidbody2D>();
