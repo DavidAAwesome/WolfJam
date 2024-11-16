@@ -1,5 +1,10 @@
 using UnityEngine;
 
+public enum Charge
+{
+    Plus, Minus
+}
+
 public class ChargeScript : MonoBehaviour
 {
     [Header("Magnet Settings")] public float pullStrength = 5f;
@@ -159,10 +164,4 @@ public class ChargeScript : MonoBehaviour
         // }
         
     }
-
-    public enum Charge
-    {
-        Plus, Minus
-    }
-    
 }

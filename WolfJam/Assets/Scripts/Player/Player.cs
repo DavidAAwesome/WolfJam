@@ -8,6 +8,7 @@ public enum PlayerType
 public class Player : MonoBehaviour
 {
     public PlayerType playerType;
+    public Charge charge;
     PlayerController controller;
     public bool usePolarity;
 
@@ -37,6 +38,8 @@ public class Player : MonoBehaviour
                 controller.left = KeyCode.A;
                 controller.right = KeyCode.D;
                 controller.action = KeyCode.LeftShift;
+
+                charge = Charge.Plus;
                 break;
             case PlayerType.PlayerTwo:
                 controller.up = KeyCode.UpArrow;
@@ -44,6 +47,8 @@ public class Player : MonoBehaviour
                 controller.left = KeyCode.LeftArrow;
                 controller.right = KeyCode.RightArrow;
                 controller.action = KeyCode.RightShift;
+
+                charge = Charge.Minus;
                 break;
         }
     }
