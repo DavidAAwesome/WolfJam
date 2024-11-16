@@ -329,6 +329,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7450776544954801532, guid: 49b7a36e6ed46a14c94d5597bbdbdf09, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7847462160018265144, guid: 49b7a36e6ed46a14c94d5597bbdbdf09, type: 3}
       propertyPath: m_Name
       value: PlusChargePlatform
@@ -498,11 +502,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8312990218519167080, guid: 9d41eeb0e88967f4792b3571defca10a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5763
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 8312990218519167080, guid: 9d41eeb0e88967f4792b3571defca10a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0042
+      value: -2.97
       objectReference: {fileID: 0}
     - target: {fileID: 8312990218519167080, guid: 9d41eeb0e88967f4792b3571defca10a, type: 3}
       propertyPath: m_LocalPosition.z
