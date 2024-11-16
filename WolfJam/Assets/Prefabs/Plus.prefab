@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3445283639865859411}
   - component: {fileID: 5907088926165460402}
+  - component: {fileID: 3013376548099542875}
   m_Layer: 0
   m_Name: ForwardCollider
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3943796979770909168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.98397, y: 0.07, z: 0}
+  m_LocalPosition: {x: 0.84, y: 0.07, z: 0}
   m_LocalScale: {x: 0.525, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,6 +79,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9746208, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3013376548099542875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3943796979770909168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3d55a761ff32741be87749f9ac74bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isColliding: 0
 --- !u!1 &5398468490475723406
 GameObject:
   m_ObjectHideFlags: 0
