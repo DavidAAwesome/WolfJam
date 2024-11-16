@@ -17,7 +17,6 @@ public class PlusController : MonoBehaviour
         if(Input.GetKey(KeyCode.D)){
             transform.position += Vector3.right * (speed * Time.deltaTime);
         }
-        
         if(Input.GetKeyDown(KeyCode.W)){
             if(isGrounded){
                 rb.AddForce(Vector3.up * jumpForce);
