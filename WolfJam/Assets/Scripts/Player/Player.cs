@@ -7,9 +7,9 @@ public enum PlayerType
 }
 public class Player : MonoBehaviour
 {
+    PlayerController controller;
     public PlayerType playerType;
     public Charge charge;
-    PlayerController controller;
     public bool usePolarity;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -2,14 +2,32 @@ using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
 {
+    public bool isColliding;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        CollisionInfo otherInfo = collision.gameObject.GetComponent<CollisionInfo>();
-        CollisionInfo thisInfo = gameObject.GetComponent<CollisionInfo>();
-        if(AABBCollision(thisInfo, otherInfo)) 
+        CollisionInfo otherInfo;
+        CollisionInfo thisInfo;
+        // Null Check
+        if (collision.gameObject.GetComponent<CollisionInfo>() == null || gameObject.GetComponent<CollisionInfo>() == null)
         {
-            Debug.Log("Collision Detected!");
+            return;
         }
+        else
+        {
+            otherInfo = collision.gameObject.GetComponent<CollisionInfo>();
+            thisInfo = gameObject.GetComponent<CollisionInfo>();
+        }
+   
+        if(AABBCollision(thisInfo, otherInfo))
+        {
+            Debug.Log($"Collision Detected! {otherInfo.name}");
+            isColliding = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isColliding = false;
     }
 
     bool AABBCollision(CollisionInfo a, CollisionInfo b)

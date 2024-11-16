@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     PlayerController controller;
+    public GameObject forwardCollider;
 
     public Vector3 position;
     public float speed;
@@ -31,16 +32,36 @@ public class PlayerMovement : MonoBehaviour
     {
         // Map controller to movement
         if (controller.isLeft) {
+            // move
             transform.position += Vector3.left * speed * Time.deltaTime;
+            Flip(-1);
         }
         if (controller.isRight)
         {
+            // move
             transform.position += Vector3.right * speed * Time.deltaTime;
+            Flip(1);
         }
         if (controller.isDown)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
+    }
+
+    void Flip(int direction)
+    {
+        // Left -1, Right 1
+        Vector3 scale = transform.localScale;
+        if(scale.x < 0)
+        {
+            scale.x *= -direction;
+        }
+        else
+        {
+            scale.x *= direction;
+        }
+        Debug.Log(scale);
+        transform.localScale = scale;
     }
 
     public void CheckJump()
