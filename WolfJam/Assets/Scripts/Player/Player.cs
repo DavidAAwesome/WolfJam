@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public PlayerType playerType;
     public Charge charge;
     public bool usePolarity;
+    public Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,7 +25,12 @@ public class Player : MonoBehaviour
     {
         usePolarity = controller.useAction;
         if (usePolarity) {
+            animator.SetBool("Polarity",true);
             Debug.Log("Is on.");
+        }
+        else
+        {
+            animator.SetBool("Polarity", false);
         }
     }
 

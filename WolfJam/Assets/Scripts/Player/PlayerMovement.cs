@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
 
     public float jumpForce; // jump height
+    public Animator animator;
     bool previousJumpState = false;
 
     public bool isGrounded;
@@ -37,16 +38,22 @@ public class PlayerMovement : MonoBehaviour
             { 
                 // move
                 transform.position += Vector3.left * speed * Time.deltaTime;
+                animator.SetBool("Moving", true);
             }
         }
-        if (controller.isRight)
+        else if (controller.isRight)
         {
                 Flip(1);
             if (!forwardCollider.GetComponent<ForwardCollider>().isColliding)
             {
                 // move
                 transform.position += Vector3.right * speed * Time.deltaTime;
+                animator.SetBool("Moving", true);
             }
+        }
+        else
+        {
+            animator.SetBool("Moving", false);
         }
         if (controller.isDown)
         {
