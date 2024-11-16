@@ -32,20 +32,20 @@ public class PlayerMovement : MonoBehaviour
     {
         // Map controller to movement
         if (controller.isLeft) {
+                Flip(-1);
             if (!forwardCollider.GetComponent<ForwardCollider>().isColliding)
             { 
                 // move
                 transform.position += Vector3.left * speed * Time.deltaTime;
-                Flip(-1);
             }
         }
         if (controller.isRight)
         {
+                Flip(1);
             if (!forwardCollider.GetComponent<ForwardCollider>().isColliding)
             {
                 // move
                 transform.position += Vector3.right * speed * Time.deltaTime;
-                Flip(1);
             }
         }
         if (controller.isDown)

@@ -8,6 +8,7 @@ TagManager:
   - Plus
   - Minus
   - Enemy
+  - Wall
   layers:
   - Default
   - TransparentFX
