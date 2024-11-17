@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Barrier : MonoBehaviour
+public class Barrier : Triggerable
 {
     public Charge charge;
     SpriteRenderer spriteRenderer; // Change sprite based on charge
@@ -8,5 +8,16 @@ public class Barrier : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    public void TurnOff()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public override void Trigger()
+    {
+        TurnOff();
+        //base.Trigger();
     }
 }

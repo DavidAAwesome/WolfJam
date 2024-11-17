@@ -9,6 +9,7 @@ TagManager:
   - Minus
   - Enemy
   - Wall
+  - Interactable
   layers:
   - Default
   - TransparentFX
