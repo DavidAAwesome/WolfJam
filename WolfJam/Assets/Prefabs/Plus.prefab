@@ -202,7 +202,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: 33972192b3fd6de4a8d55392f1e95973, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -264,11 +264,13 @@ MonoBehaviour:
   up: 0
   down: 0
   action: 0
+  interact: 0
   isLeft: 0
   isRight: 0
   isUp: 0
   isDown: 0
   useAction: 0
+  useInteract: 0
 --- !u!61 &802629428212817748
 BoxCollider2D:
   m_ObjectHideFlags: 0
