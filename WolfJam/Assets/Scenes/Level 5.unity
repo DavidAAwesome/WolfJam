@@ -186,8 +186,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1633380895781531907, guid: 2557a91294ff9804d9d9403aaa238851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 165349074}
   m_SourcePrefab: {fileID: 100100000, guid: 2557a91294ff9804d9d9403aaa238851, type: 3}
+--- !u!1 &165349073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1633380895781531907, guid: 2557a91294ff9804d9d9403aaa238851, type: 3}
+  m_PrefabInstance: {fileID: 165349072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &165349074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165349073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f082445ede6ab478b6f42f751a2b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOneTag: Plus
+  playerTwoTag: Minus
 --- !u!1 &206254548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,8 +2911,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5398468490475723406, guid: b222abdf0c6571a49a6e81e71dcb8240, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2015584548}
   m_SourcePrefab: {fileID: 100100000, guid: b222abdf0c6571a49a6e81e71dcb8240, type: 3}
+--- !u!1 &2015584547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5398468490475723406, guid: b222abdf0c6571a49a6e81e71dcb8240, type: 3}
+  m_PrefabInstance: {fileID: 2015584546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2015584548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015584547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f082445ede6ab478b6f42f751a2b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOneTag: Plus
+  playerTwoTag: Minus
 --- !u!1001 &2026241384
 PrefabInstance:
   m_ObjectHideFlags: 0
