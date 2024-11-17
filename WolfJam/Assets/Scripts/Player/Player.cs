@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public Animator animator;
 
     bool previousInteractState = false;
-    GameObject interactable;
+    public GameObject interactable;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         usePolarity = controller.useAction;
-        previousInteractState = controller.useInteract;
+        PressedInteract();
         if (usePolarity) {
             animator.SetBool("Polarity", true);
             Debug.Log("Is on.");
@@ -43,11 +43,13 @@ public class Player : MonoBehaviour
     {
         if(previousInteractState == false && controller.useInteract)
         {
+            Debug.Log("Interact pressed.");
             if(interactable != null)
             {
                 interactable.GetComponent<Interactable>().Activate();
             }
         }
+        previousInteractState = controller.useInteract;
     }
 
     void SetUpControls()
@@ -81,6 +83,16 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag == "Interactable")
         {
+            Debug.Log($"{collision.name} is interactable.");
+            interactable = collision.gameObject;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Interactable")
+        {
+            Debug.Log($"{collision.name} is interactable.");
             interactable = collision.gameObject;
         }
     }
