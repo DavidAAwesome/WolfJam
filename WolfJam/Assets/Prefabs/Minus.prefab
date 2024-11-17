@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7474588236445463964}
   - component: {fileID: 1820952175928909898}
   - component: {fileID: 1162122115267391909}
+  - component: {fileID: 7464202161158045151}
   m_Layer: 0
   m_Name: Minus
   m_TagString: Minus
@@ -135,6 +136,7 @@ MonoBehaviour:
   playerType: 1
   charge: 0
   usePolarity: 0
+  animator: {fileID: 7464202161158045151}
 --- !u!114 &7474588236445463964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +153,7 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   speed: 5
   jumpForce: 400
+  animator: {fileID: 7464202161158045151}
   isGrounded: 0
 --- !u!114 &1820952175928909898
 MonoBehaviour:
@@ -220,6 +223,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.71, y: 1.9}
   m_EdgeRadius: 0
+--- !u!95 &7464202161158045151
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633380895781531907}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e8acb53e6a094f54bb6c7d8f6e90293f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6746956298052137527
 GameObject:
   m_ObjectHideFlags: 0
