@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Moving", false);
         }
-        if (controller.isDown)
+        if (controller.isDown && !isGrounded)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
@@ -83,6 +83,11 @@ public class PlayerMovement : MonoBehaviour
             // On the frame the jump key is just pressed
             isGrounded = false;
             rb.AddForce(Vector2.up * jumpForce);
+        }
+        // Check if forwardCollider has bumped into something
+        if (!isGrounded && forwardCollider.GetComponent<ForwardCollider>().isColliding)
+        {
+            rb.linearVelocityY = 0;
         }
     }
 

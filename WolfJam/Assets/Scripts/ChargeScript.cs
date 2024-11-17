@@ -5,7 +5,7 @@ public enum Charge
     Plus, Minus
 }
 
-public class ChargeScript : MonoBehaviour
+public class ChargeScript : Triggerable
 {
     [Header("Magnet Settings")] public float pullStrength = 5f;
     public float minDistance = 0.5f;
@@ -22,6 +22,11 @@ public class ChargeScript : MonoBehaviour
         {
             Debug.LogError("Magnet Zone requires a Collider2D!");
         }
+    }
+
+    public override void Trigger()
+    {
+        gameObject.SetActive(true);
     }
 
     private void OnTriggerStay2D(Collider2D other)
