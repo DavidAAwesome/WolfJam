@@ -1584,7 +1584,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1567966085}
   m_SourcePrefab: {fileID: 100100000, guid: b222abdf0c6571a49a6e81e71dcb8240, type: 3}
-<<<<<<< Updated upstream
 --- !u!1 &1567966084 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5398468490475723406, guid: b222abdf0c6571a49a6e81e71dcb8240, type: 3}
@@ -1604,65 +1603,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOneTag: Plus
   playerTwoTag: Minus
-=======
---- !u!1001 &1684984722
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5500403969153755604, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_Name
-      value: BGMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150349762507498231, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.56303835
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150349762507498231, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.34684926
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150349762507498231, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.04268347
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150349762507498231, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150349762507498231, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150349762507498231, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150349762507498231, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150349762507498231, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150349762507498231, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9150349762507498231, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 98cdf1c82828cd846939a816f66cf689, type: 3}
->>>>>>> Stashed changes
 --- !u!1 &1905598477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,4 +1891,3 @@ SceneRoots:
   - {fileID: 1438005572}
   - {fileID: 1009831277}
   - {fileID: 1019010584}
-  - {fileID: 1684984722}
