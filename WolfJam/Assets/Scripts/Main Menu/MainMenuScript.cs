@@ -18,4 +18,10 @@ public class MainMenuScript : MonoBehaviour
         Debug.Log("User has quit the game");
     }
 
+    public void GoToMainMenu()
+    {
+        // Load the first scene (main menu)
+        SceneManager.LoadScene(0); 
+    }
+
 }
